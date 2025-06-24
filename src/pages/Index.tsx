@@ -39,13 +39,13 @@ const Index = () => {
       icon: Palette,
       title: "Visión Creativa",
       description:
-        "Transformando ideas en diseños visualmente impactantes y funcionales",
+        "Me encanta explorar la intersección entre lógica y creatividad, donde la ingeniería se encuentra con la estética para dar forma a ideas que resuelven problemas reales.",
     },
     {
       icon: Users,
       title: "Centrado en el Usuario",
       description:
-        "Poniendo a los usuarios en el centro de cada decisión de diseño",
+        "Aquí podrás descubrir una colección de ideas hechas realidad, nacidas desde mi estudio —el laboratorio donde la intuición, la razón y la pasión se fusionan.",
     },
     {
       icon: Zap,
@@ -214,11 +214,11 @@ const Index = () => {
           <div className="grid lg:grid-cols-3 gap-12">
             <div className="lg:col-span-1">
               <h2 className="text-3xl font-display font-bold leading-tight">
-                Diseño centrado en soluciones
+                Bienvenidos!
               </h2>
               <p className="mt-4 text-muted-foreground">
-                Mi filosofía de trabajo se basa en estos tres pilares
-                fundamentales.
+                Soy Franco Li Garrido, Una mente curiosa, aventurera y
+                apasionada por la innovación.
               </p>
             </div>
             <div className="lg:col-span-2 grid sm:grid-cols-2 gap-8">
