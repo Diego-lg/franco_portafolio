@@ -1,0 +1,173 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Modern Portfolio Design System
+   * Custom color palette for a product designer portfolio
+   */
+  :root {
+    /* Core Brand Colors */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+
+    /* Card and Surface Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+
+    /* Primary Brand - Black */
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+
+    /* Secondary - Light Gray */
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+
+    /* Muted Colors */
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+
+    /* Accent - Dark Gray */
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 98%;
+
+    /* Success/Destructive */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Interactive Elements */
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+
+    /* Border Radius */
+    --radius: 0.75rem;
+
+    /* Sidebar Colors */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 0 0% 26.1%;
+    --sidebar-primary: 0 0% 9%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 0 0% 96.1%;
+    --sidebar-accent-foreground: 0 0% 9%;
+    --sidebar-border: 0 0% 89.8%;
+    --sidebar-ring: 0 0% 3.9%;
+
+    /* Custom Portfolio Variables */
+    --gradient-from: 0 0% 3.9%;
+    --gradient-via: 0 0% 20%;
+    --gradient-to: 0 0% 45%;
+
+    --text-gradient-from: 0 0% 3.9%;
+    --text-gradient-to: 0 0% 20%;
+
+    --hero-background: 0 0% 98%;
+    --surface-elevated: 0 0% 99%;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 0 0% 82%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+
+    --sidebar-background: 0 0% 9%;
+    --sidebar-foreground: 0 0% 95.9%;
+    --sidebar-primary: 0 0% 98%;
+    --sidebar-primary-foreground: 0 0% 9%;
+    --sidebar-accent: 0 0% 14.9%;
+    --sidebar-accent-foreground: 0 0% 95.9%;
+    --sidebar-border: 0 0% 14.9%;
+    --sidebar-ring: 0 0% 83.1%;
+
+    /* Dark Mode Custom Variables */
+    --gradient-from: 0 0% 98%;
+    --gradient-via: 0 0% 75%;
+    --gradient-to: 0 0% 50%;
+
+    --text-gradient-from: 0 0% 98%;
+    --text-gradient-to: 0 0% 70%;
+
+    --hero-background: 0 0% 3.9%;
+    --surface-elevated: 0 0% 14.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
+  }
+
+  /* Custom Gradient Text */
+  .gradient-text {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--text-gradient-from)),
+      hsl(var(--text-gradient-to))
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Smooth animations */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  /* Glass morphism effect */
+  .glass {
+    backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+  }
+
+  .dark .glass {
+    background-color: rgba(15, 15, 15, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+  }
+}
