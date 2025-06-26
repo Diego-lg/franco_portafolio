@@ -9,7 +9,12 @@ interface NavbarProps {
 
 export const Navbar = ({ className }: NavbarProps) => {
   return (
-    <nav className={cn("fixed top-0 left-0 right-0 z-50", className)}>
+    <nav
+      className={cn(
+        "fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm border-b border-gray-200",
+        className,
+      )}
+    >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
@@ -22,17 +27,17 @@ export const Navbar = ({ className }: NavbarProps) => {
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
-            <a
-              href="/#work"
+            <Link
+              to="/proyectos"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              Trabajo
-            </a>
+              Proyectos
+            </Link>
             <a
-              href="/product"
+              href="/galeria"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              Producto
+              Galería
             </a>
             <a
               href="/#about"
@@ -44,7 +49,7 @@ export const Navbar = ({ className }: NavbarProps) => {
               href="/#contact"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              Contacto
+              Tienda
             </a>
             <Button
               size="sm"
